@@ -25,7 +25,7 @@ author:
   # Biographic information
   avatar           : "Biodata.jpg"
   name             : "Md Morshed Ali"
-  pronouns         : "he/him"  
+  pronouns         : #"he/him"  
   bio              : "Prospective PhD Student | Lecturer, Department of CSE"
   location         : "Dhaka, Bangladesh"
   employer         : "Uttara University"
