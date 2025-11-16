@@ -92,42 +92,17 @@ function toggleContent(id) {
     <li class="pub-item">
       <strong>{{ post.title }}</strong>
       <br/>
-      {% if post.corresponding %}
-        {% comment %} Add star mark for corresponding author in the correct position {% endcomment %}
-        {% assign author_parts = post.authors | split: ', ' %}
-        {% assign updated_authors = "" %}
-        {% for author in author_parts %}
-          {% if author == post.corresponding %}
-            {% assign updated_author = author | append: '★' %}
-            {% assign updated_author = updated_author | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' %}
-          {% else %}
-            {% assign updated_author = author | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' %}
-          {% endif %}
-          {% if forloop.first %}
-            {% assign updated_authors = updated_author %}
-          {% else %}
-            {% assign updated_authors = updated_authors | append: ', ' | append: updated_author %}
-          {% endif %}
-        {% endfor %}
-        {{ updated_authors }}
-      {% else %}
-        {% comment %} Default: highlight your name {% endcomment %}
-        {{ post.authors | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' }}
-      {% endif %}
+      {{ post.authors | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' }}
       <br/>
       <em>{{ post.venue }}</em>, {{ post.date | date: '%Y' }}.
-      {% if post.corresponding %}
-        <br/><small>★ Corresponding author</small>
-      {% endif %}
       
       <div class="pub-links">
         {% if post.paperurl and post.status != 'Submitted' and post.status != 'Accepted' %}
           {% comment %} Published paper - show DOI and all links {% endcomment %}
           <a href="{{ post.paperurl }}" target="_blank">📄 DOI</a>
           {% if post.title contains 'conceptual IoT' %}
-            <button onclick="toggleContent('methodology-{{ pub_counter }}')">🔬 Methodology</button>
-            <button onclick="toggleContent('slides-{{ pub_counter }}')">📊 Slides</button>
-          {% if post.codeurl and post.codeurl != '' %}
+            <button onclick="toggleContent('journal-methodology-{{ pub_counter }}')">🔬 Methodology</button>
+            <button onclick="toggleContent('journal-slides-{{ pub_counter }}')">📊 Slides</button>
           {% endif %}
           {% if post.codeurl and post.codeurl != '' %}
             <a href="{{ post.codeurl }}" target="_blank">💻 Code</a>
@@ -152,15 +127,14 @@ function toggleContent(id) {
       </div>
       
       {% if post.title contains 'conceptual IoT' and post.paperurl and post.status != 'Submitted' and post.status != 'Accepted' %}
-        <div id="journal-methodology-{{ pub_counter }}" class="collapsible-content" style="display: none;">
+        <div id="journal-methodology-{{ pub_counter }}" class="collapsible-content">
           <h4>Methodology</h4>
-          <img src="{{ '{{ base_path }}/files/CKD Method.jpg' | relative_url }}" alt="CKD Prediction Methodology" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
-          <p><em>Figure: Proposed methodology for CKD detection using IoT and deep learning</em></p>
+          <img src="{{ base_path }}/files/CKD Method.jpg" alt="CKD Prediction Methodology">
         </div>
         
-        <div id="journal-slides-{{ pub_counter }}" class="collapsible-content" style="display: none;">
+        <div id="journal-slides-{{ pub_counter }}" class="collapsible-content">
           <h4>Presentation Slides</h4>
-          <a href="{{ '{{ base_path }}/files/CKD Method.pdf' | relative_url }}" target="_blank" style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Paper (PDF)</a>
+          <a href="{{ base_path }}/files/Machine Learning.pdf" target="_blank" style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Paper (PDF)</a>
         </div>
       {% endif %}
     </li>
@@ -180,33 +154,9 @@ function toggleContent(id) {
         <strong>{{ post.title }}</strong>
         <span class="award-badge">🏆 Best Technical Paper</span>
         <br/>
-        {% if post.corresponding %}
-          {% comment %} Add star mark for corresponding author in the correct position {% endcomment %}
-          {% assign author_parts = post.authors | split: ', ' %}
-          {% assign updated_authors = "" %}
-          {% for author in author_parts %}
-            {% if author == post.corresponding %}
-              {% assign updated_author = author | append: '★' %}
-              {% assign updated_author = updated_author | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' %}
-            {% else %}
-              {% assign updated_author = author | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' %}
-            {% endif %}
-            {% if forloop.first %}
-              {% assign updated_authors = updated_author %}
-            {% else %}
-              {% assign updated_authors = updated_authors | append: ', ' | append: updated_author %}
-            {% endif %}
-          {% endfor %}
-          {{ updated_authors }}
-        {% else %}
-          {% comment %} Default: highlight your name {% endcomment %}
-          {{ post.authors | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' }}
-        {% endif %}
+        {{ post.authors | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' }}
         <br/>
         <em>{{ post.venue }}</em>, {{ post.date | date: '%Y' }}.
-        {% if post.corresponding %}
-          <br/><small>★ Corresponding author</small>
-        {% endif %}
         
         <div class="pub-links">
           {% if post.paperurl %}
@@ -222,9 +172,8 @@ function toggleContent(id) {
           {% else %}
             {% comment %} Accepted conference paper {% endcomment %}
             <span style="color:#28a745;">✓ Accepted</span> — will be available online soon
-            <button onclick="toggleContent('methodology-{{ pub_counter }}')">🔬 Methodology</button>
-            <button onclick="toggleContent('slides-{{ pub_counter }}')">📊 Slides</button>
-          {% if post.codeurl and post.codeurl != '' %}
+            <button onclick="toggleContent('conf-methodology-{{ pub_counter }}')">🔬 Methodology</button>
+            <button onclick="toggleContent('conf-slides-{{ pub_counter }}')">📊 Slides</button>
             {% if post.codeurl and post.codeurl != '' %}
               <a href="{{ post.codeurl }}" target="_blank">💻 Code</a>
             {% else %}
@@ -233,15 +182,14 @@ function toggleContent(id) {
           {% endif %}
         </div>
         
-        <div id="conf-methodology-{{ pub_counter }}" class="collapsible-content" style="display: none;">
+        <div id="conf-methodology-{{ pub_counter }}" class="collapsible-content">
           <h4>Methodology</h4>
-          <img src="{{ '{{ base_path }}/files/acb_net_paper_model (1).png' | relative_url }}" alt="ACB-TriNet Methodology" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
-          <p><em>Figure: ACB-TriNet architecture with asymmetric convolutions and triplet attention</em></p>
+          <img src="{{ base_path }}/files/acb_net_paper_model(1).png" alt="ACB-TriNet Methodology">
         </div>
         
-        <div id="conf-slides-{{ pub_counter }}" class="collapsible-content" style="display: none;">
+        <div id="conf-slides-{{ pub_counter }}" class="collapsible-content">
           <h4>Presentation Slides</h4>
-          <a href="{{ '{{ base_path }}/files/ICETCS-ID-12_ACBNet Paper Presentation Slides.pptx' | relative_url }}" download style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Slides (PPTX)</a>
+          <a href="{{ base_path }}/files/ICETCS-ID-12_ACBNet Paper Presentation Slides.pptx" download style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Slides (PPTX)</a>
         </div>
       </li>
     {% endif %}
@@ -261,42 +209,17 @@ function toggleContent(id) {
     <li class="pub-item">
       <strong>{{ post.title }}</strong>
       <br/>
-      {% if post.corresponding %}
-        {% comment %} Add star mark for corresponding author in the correct position {% endcomment %}
-        {% assign author_parts = post.authors | split: ', ' %}
-        {% assign updated_authors = "" %}
-        {% for author in author_parts %}
-          {% if author == post.corresponding %}
-            {% assign updated_author = author | append: '★' %}
-            {% assign updated_author = updated_author | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' %}
-          {% else %}
-            {% assign updated_author = author | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' %}
-          {% endif %}
-          {% if forloop.first %}
-            {% assign updated_authors = updated_author %}
-          {% else %}
-            {% assign updated_authors = updated_authors | append: ', ' | append: updated_author %}
-          {% endif %}
-        {% endfor %}
-        {{ updated_authors }}
-      {% else %}
-        {% comment %} Default: highlight your name {% endcomment %}
-        {{ post.authors | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' }}
-      {% endif %}
+      {{ post.authors | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' }}
       <br/>
       <em>{{ post.venue }}</em>, {{ post.date | date: '%Y' }}.
-      {% if post.corresponding %}
-        <br/><small>★ Corresponding author</small>
-      {% endif %}
       
       <div class="pub-links">
         {% if post.paperurl %}
           {% comment %} Published conference paper {% endcomment %}
           <a href="{{ post.paperurl }}" target="_blank">📄 DOI</a>
           {% if post.title contains 'Cardiovascular Disease' %}
-            <button onclick="toggleContent('methodology-{{ pub_counter }}')">🔬 Methodology</button>
-            <button onclick="toggleContent('slides-{{ pub_counter }}')">📊 Slides</button>
-          {% if post.codeurl and post.codeurl != '' %}
+            <button onclick="toggleContent('conf-methodology-{{ pub_counter }}')">🔬 Methodology</button>
+            <button onclick="toggleContent('conf-slides-{{ pub_counter }}')">📊 Slides</button>
           {% endif %}
           {% if post.codeurl and post.codeurl != '' %}
             <a href="{{ post.codeurl }}" target="_blank">💻 Code</a>
@@ -315,9 +238,8 @@ function toggleContent(id) {
           {% comment %} Accepted conference paper {% endcomment %}
           <span style="color:#28a745;">✓ Accepted</span> — will be available online soon
           {% if post.title contains 'Cardiovascular Disease' %}
-            <button onclick="toggleContent('methodology-{{ pub_counter }}')">🔬 Methodology</button>
-            <button onclick="toggleContent('slides-{{ pub_counter }}')">📊 Slides</button>
-          {% if post.codeurl and post.codeurl != '' %}
+            <button onclick="toggleContent('conf-methodology-{{ pub_counter }}')">🔬 Methodology</button>
+            <button onclick="toggleContent('conf-slides-{{ pub_counter }}')">📊 Slides</button>
           {% endif %}
           {% if post.codeurl and post.codeurl != '' %}
             <a href="{{ post.codeurl }}" target="_blank">💻 Code</a>
@@ -328,15 +250,14 @@ function toggleContent(id) {
       </div>
       
       {% if post.title contains 'Cardiovascular Disease' and post.status != 'Submitted' %}
-        <div id="conf-methodology-{{ pub_counter }}" class="collapsible-content" style="display: none;">
+        <div id="conf-methodology-{{ pub_counter }}" class="collapsible-content">
           <h4>Methodology</h4>
-          <img src="{{ '{{ base_path }}/files/cvd-methodology.jpeg' | relative_url }}" alt="CVD Prediction Methodology" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
-          <p><em>Figure: Feature selection and machine learning pipeline for cardiovascular disease prediction</em></p>
+          <img src="{{ base_path }}/files/Evaluating the Efficacy of Feature Selection Methods in Cardiovascular Disease Prediction with Machine Learning model.jpeg" alt="CVD Prediction Methodology">
         </div>
         
-        <div id="conf-slides-{{ pub_counter }}" class="collapsible-content" style="display: none;">
+        <div id="conf-slides-{{ pub_counter }}" class="collapsible-content">
           <h4>Presentation Slides</h4>
-          <a href="{{ '{{ base_path }}/files/Presentation Slide Evaluating the Efficacy of Feature Selection Methods in Cardiovascular Disease Prediction with Machine Learning.pdf' | relative_url }}" target="_blank" style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Slides (PDF)</a>
+          <a href="{{ base_path }}/files/Presentation Slide Evaluating the Efficacy of Feature Selection Methods in Cardiovascular Disease Prediction with Machine Learning.pdf" target="_blank" style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Slides (PDF)</a>
         </div>
       {% endif %}
     </li>
