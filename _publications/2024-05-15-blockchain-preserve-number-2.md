@@ -8,7 +8,7 @@ date: 2024-05-15
 venue: 'Security and Privacy (Preprint)'
 paperurl: 'https://doi.org/10.22541/au.171575721.19694510/v1'
 citation: ''
-authors: 'Md. Morshed Ali, Md Saiful Islam, Mohammed Nasir Uddin, Md. Ashraf Uddin'
+authors: 'Md. Morshed Ali, Md Saiful Islam, Mohammed Nasir Uddin, Md. Ashraf Uddin, Kashfi Shormita Kushal'
 corresponding: 'Md. Morshed Ali'
 codeurl: 'https://github.com/morshed-ali/A-Blockchain-Based-Digital-Classified-Forensic-Image-Preservation-Framework'
 ---
