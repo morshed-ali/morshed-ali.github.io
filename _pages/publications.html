@@ -125,8 +125,9 @@ function toggleContent(id) {
           {% comment %} Published paper - show DOI and all links {% endcomment %}
           <a href="{{ post.paperurl }}" target="_blank">📄 DOI</a>
           {% if post.title contains 'conceptual IoT' %}
-            <button onclick="toggleContent('journal-methodology-{{ pub_counter }}')">🔬 Methodology</button>
-            <button onclick="toggleContent('journal-slides-{{ pub_counter }}')">📊 Slides</button>
+            <button onclick="toggleContent('methodology-{{ pub_counter }}')">🔬 Methodology</button>
+            <button onclick="toggleContent('slides-{{ pub_counter }}')">📊 Slides</button>
+          {% if post.codeurl and post.codeurl != '' %}
           {% endif %}
           {% if post.codeurl and post.codeurl != '' %}
             <a href="{{ post.codeurl }}" target="_blank">💻 Code</a>
@@ -221,8 +222,9 @@ function toggleContent(id) {
           {% else %}
             {% comment %} Accepted conference paper {% endcomment %}
             <span style="color:#28a745;">✓ Accepted</span> — will be available online soon
-            <button onclick="toggleContent('conf-methodology-{{ pub_counter }}')">🔬 Methodology</button>
-            <button onclick="toggleContent('conf-slides-{{ pub_counter }}')">📊 Slides</button>
+            <button onclick="toggleContent('methodology-{{ pub_counter }}')">🔬 Methodology</button>
+            <button onclick="toggleContent('slides-{{ pub_counter }}')">📊 Slides</button>
+          {% if post.codeurl and post.codeurl != '' %}
             {% if post.codeurl and post.codeurl != '' %}
               <a href="{{ post.codeurl }}" target="_blank">💻 Code</a>
             {% else %}
@@ -292,8 +294,9 @@ function toggleContent(id) {
           {% comment %} Published conference paper {% endcomment %}
           <a href="{{ post.paperurl }}" target="_blank">📄 DOI</a>
           {% if post.title contains 'Cardiovascular Disease' %}
-            <button onclick="toggleContent('conf-methodology-{{ pub_counter }}')">🔬 Methodology</button>
-            <button onclick="toggleContent('conf-slides-{{ pub_counter }}')">📊 Slides</button>
+            <button onclick="toggleContent('methodology-{{ pub_counter }}')">🔬 Methodology</button>
+            <button onclick="toggleContent('slides-{{ pub_counter }}')">📊 Slides</button>
+          {% if post.codeurl and post.codeurl != '' %}
           {% endif %}
           {% if post.codeurl and post.codeurl != '' %}
             <a href="{{ post.codeurl }}" target="_blank">💻 Code</a>
@@ -312,8 +315,9 @@ function toggleContent(id) {
           {% comment %} Accepted conference paper {% endcomment %}
           <span style="color:#28a745;">✓ Accepted</span> — will be available online soon
           {% if post.title contains 'Cardiovascular Disease' %}
-            <button onclick="toggleContent('conf-methodology-{{ pub_counter }}')">🔬 Methodology</button>
-            <button onclick="toggleContent('conf-slides-{{ pub_counter }}')">📊 Slides</button>
+            <button onclick="toggleContent('methodology-{{ pub_counter }}')">🔬 Methodology</button>
+            <button onclick="toggleContent('slides-{{ pub_counter }}')">📊 Slides</button>
+          {% if post.codeurl and post.codeurl != '' %}
           {% endif %}
           {% if post.codeurl and post.codeurl != '' %}
             <a href="{{ post.codeurl }}" target="_blank">💻 Code</a>
