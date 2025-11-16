@@ -109,7 +109,7 @@ function toggleContent(id) {
         {% if post.paperurl and post.status != 'Submitted' and post.status != 'Accepted' %}
           {% comment %} Published paper - show DOI and all links {% endcomment %}
           <a href="{{ post.paperurl }}" target="_blank">📄 DOI</a>
-          {% if post.title contains 'conceptual IoT' %}
+          {% if post.title contains 'chronic kidney disease' %}
             <button onclick="toggleContent('journal-methodology-{{ pub_counter }}')">🔬 Methodology</button>
             <button onclick="toggleContent('journal-slides-{{ pub_counter }}')">📊 Slides</button>
           {% endif %}
@@ -135,15 +135,15 @@ function toggleContent(id) {
         {% endif %}
       </div>
       
-      {% if post.title contains 'conceptual IoT' and post.paperurl and post.status != 'Submitted' and post.status != 'Accepted' %}
+      {% if post.title contains 'chronic kidney disease' and post.paperurl and post.status != 'Submitted' and post.status != 'Accepted' %}
         <div id="journal-methodology-{{ pub_counter }}" class="collapsible-content">
           <h4>Methodology</h4>
-          <img src="{{ base_path }}/files/CKD Method.pdf" alt="CKD Prediction Methodology">
+          <a href="{{ base_path }}/files/CKD Method.pdf" alt="CKD Prediction Methodology">
         </div>
         
         <div id="journal-slides-{{ pub_counter }}" class="collapsible-content">
           <h4>Presentation Slides</h4>
-          <a href="{{ base_path }}/files/Machine Learning.pdf" target="_blank" style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Paper (PDF)</a>
+          <a href="{{ base_path }}/files/CKD Method.pdf" target="_blank" style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Paper (PDF)</a>
         </div>
       {% endif %}
     </li>
