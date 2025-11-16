@@ -9,7 +9,7 @@ redirect_from:
 
 ## About Me
 
-I am Md Morshed Ali, a prospective PhD student in Computer Science and currently a Lecturer in the Department of Computer Science & Engineering at Uttara University. With extensive hands-on teaching experience in core computer science courses, I actively lead interdisciplinary research bridging Artificial Intelligence (ML/DL), Computer Vision, Natural Language Processing and Cybersecurity. My recent research includes pioneering work on critical medical image analysis, disease prediction, and developing tools for a smart education system.
+I am Md Morshed Ali, a prospective PhD student in Computer Science and currently a Lecturer in the <a href="https://www.uttara.ac.bd/department-of-cse/">Department of Computer Science & Engineering</a> at <a href="https://uttarauniversity.edu.bd/">Uttara University</a>. With extensive hands-on teaching experience in core computer science courses, I actively lead interdisciplinary research bridging Artificial Intelligence (ML/DL), Computer Vision, Natural Language Processing and Cybersecurity. My recent research includes pioneering work on critical medical image analysis, disease prediction, and developing tools for a smart education system.
 
 I am seeking PhD opportunities to advance trustworthy and privacy-preserving machine learning with applications in healthcare, education, and critical data security infrastructure. My research vision focuses on developing robust, interpretable AI systems that ensure security while maintaining high performance in resource-constrained environments.
 
