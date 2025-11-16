@@ -21,7 +21,9 @@ I am seeking PhD opportunities to advance trustworthy and privacy-preserving mac
 
 I am particularly interested in the intersection of these domains, working towards creating AI systems that are not only accurate but also secure, interpretable, and ethically deployed in real-world scenarios.
 
-*If you're a faculty member or researcher working in these areas, I'd be excited to connect and explore potential PhD opportunities and research collaborations.* <a href="mailto:morshedali.cse.jnu@gmail.com" class="cta-button">Get In Touch</a>
+<span style="color: #e74c3c; font-weight: 500; font-style: italic;">
+If you're a faculty member or researcher working in these cutting-edge areas, I'd be excited to connect and explore potential PhD opportunities and research collaborations.
+</span> <a href="mailto:morshedali.cse.jnu@gmail.com" class="cta-button">Get In Touch</a>
 
 <!-- Visitor Counter -->
 <div style="text-align: left; margin: 20px 0;">
