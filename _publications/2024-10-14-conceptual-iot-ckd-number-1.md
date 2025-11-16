@@ -8,6 +8,7 @@ date: 2024-10-14
 venue: 'Intelligence-Based Medicine'
 paperurl: 'https://doi.org/10.1016/j.ibmed.2024.100170'
 citation: ''
-authors: 'Md Morshed Ali*, Md Saiful Islam, Mohammed Nasir Uddin, Md. Ashraf Uddin'
+authors: 'Md Morshed Ali, Md Saiful Islam, Mohammed Nasir Uddin, Md. Ashraf Uddin'
+corresponding: 'Md Morshed Ali'
 codeurl: 'https://github.com/morshed-ali/AI-ML-In-Healthcare'
 ---
