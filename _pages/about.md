@@ -21,7 +21,8 @@ I am seeking PhD opportunities to advance trustworthy and privacy-preserving mac
 
 <span style="color: #e74c3c; font-weight: 500; font-style: italic;">
 If you're a faculty member or researcher working in these cutting-edge areas, I'd be excited to connect and explore potential PhD opportunities and research collaborations.
-</span> <a href="mailto:morshedali.cse.jnu@gmail.com" class="cta-button">Write me</a>
+</span> <strong>Email: <a href="mailto:morshed.ali.cse@gmail.com" style="color: #e74c3c; text-decoration: none; border-bottom: 1px solid #e74c3c;">morshed.ali.cse@gmail.com</a></strong>
+</p>
 
 <!-- Visitor Counter -->
 <div style="text-align: left; margin: 20px 0;">
