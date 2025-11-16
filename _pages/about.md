@@ -9,17 +9,19 @@ redirect_from:
 
 ## About Me
 
-I am Md Morshed Ali, a prospective PhD student in Computer Science and Lecturer in the Department of CSE at Uttara University. I have hands‑on teaching and mentoring experience in core CS courses and actively collaborate on research projects bridging computer security, computer vision, and NLP. My recent work evaluates feature selection strategies for cardiovascular disease prediction and develops efficient deep models for malware image classification.
+I am Md Morshed Ali, a prospective PhD student in Computer Science and currently a Lecturer in the Department of Computer Science & Engineering at Uttara University. With extensive hands-on teaching experience in core computer science courses, I actively lead interdisciplinary research bridging Artificial Intelligence (ML/DL), Computer Vision, Natural Language Processing and Cybersecurity. My recent research includes pioneering work on critical medical image analysis, disease prediction, and developing tools for a smart education system.
 
-I am seeking a PhD position to advance trustworthy and privacy‑preserving machine learning with applications to healthcare and critical cyber systems. I am particularly interested in adversarial robustness, interpretable vision models for medical imaging, and secure ML deployment in resource‑constrained settings.
+I am seeking PhD opportunities to advance trustworthy and privacy-preserving machine learning with applications in healthcare, education, and critical data security infrastructure. My research vision focuses on developing robust, interpretable AI systems that ensure security while maintaining high performance in resource-constrained environments.
 
 ## Research Interests
 
-- Adversarial machine learning and privacy-preserving ML
-- Medical imaging and robust computer vision systems
-- Applied NLP for healthcare and public sector data
+- **Adversarial Machine Learning & Privacy-Preserving AI**: Developing robust defense mechanisms against adversarial attacks and creating secure, privacy-aware machine learning frameworks for sensitive data environments
+- **Medical Imaging & Computer Vision Systems**: Building interpretable and reliable computer vision systems for medical diagnosis, with focus on explainable AI in healthcare applications
+- **Applied Natural Language Processing**: Leveraging NLP techniques for healthcare analytics and educational systems, and for social good.
 
-If you're a faculty member or researcher working in these areas, I'd be excited to connect and explore potential PhD opportunities.
+I am particularly interested in the intersection of these domains, working towards creating AI systems that are not only accurate but also secure, interpretable, and ethically deployed in real-world scenarios.
+
+*If you're a faculty member or researcher working in these areas, I'd be excited to connect and explore potential PhD opportunities and research collaborations.* <a href="mailto:morshedali.cse.jnu@gmail.com" class="cta-button">Get In Touch</a>
 
 <!-- Visitor Counter -->
 <div style="text-align: left; margin: 20px 0;">
