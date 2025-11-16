@@ -79,48 +79,6 @@ function toggleContent(id) {
 <h3>Journal Papers
 
   <ol>
-  {% assign mypubs = site.publications | sort: 'date' %}
-  {% assign pub_counter = 0 %}
-  
-  {% comment %} First: ACB-TriNet with award {% endcomment %}
-  {% for post in mypubs %}
-    {% if post.title and post.title contains 'ACB-TriNet' %}
-      {% assign pub_counter = pub_counter | plus: 1 %}
-      <li class="pub-item">
-        <strong>{{ post.title }}</strong>
-        <span class="award-badge">🏆 Best Technical Paper</span>
-        <br/>
-        {{ post.authors | replace: 'R. Haque', '<strong>R. Haque</strong>' }}
-        <br/>
-        <em>{{ post.venue }}</em>, {{ post.date | date: '%Y' }}.
-        
-        <div class="pub-links">
-          {% if post.paperurl %}
-            <a href="{{ post.paperurl }}" target="_blank">📄 DOI</a>
-          {% else %}
-            <span style="color:#28a745;">✓ Accepted</span> — will be available online in Springer Book Chapter
-          {% endif %}
-          <button onclick="toggleContent('methodology-{{ pub_counter }}')">🔬 Methodology</button>
-          <button onclick="toggleContent('slides-{{ pub_counter }}')">📊 Slides</button>
-          {% if post.codeurl and post.codeurl != '' %}
-            <a href="{{ post.codeurl }}" target="_blank">💻 Code</a>
-          {% else %}
-            <a href="#" style="pointer-events:none;opacity:0.5;" title="Code will be available soon">💻 Code</a>
-          {% endif %}
-        </div>
-        
-        <div id="methodology-{{ pub_counter }}" class="collapsible-content">
-          <h4>Methodology</h4>
-          <img src="{{ base_path }}/files/acb_net_paper_model.png" alt="ACB-TriNet Methodology">
-        </div>
-        
-        <div id="slides-{{ pub_counter }}" class="collapsible-content">
-          <h4>Presentation Slides</h4>
-          <a href="{{ base_path }}/files/ICETCS-ID-12_ACBNet Paper Presentation Slides.pptx" download style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Slides (PPTX)</a>
-        </div>
-      </li>
-    {% endif %}
-  {% endfor %}
 
   {% comment %} Remaining publications {% endcomment %}
   {% for post in mypubs %}
@@ -136,7 +94,7 @@ function toggleContent(id) {
     <li class="pub-item">
       <strong>{{ post.title }}</strong>
       <br/>
-      {{ post.authors | replace: 'R. Haque', '<strong>R. Haque</strong>' }}
+      {{ post.authors | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' }}
       <br/>
       <em>{{ post.venue }}</em>, {{ post.date | date: '%Y' }}.
       
@@ -149,7 +107,7 @@ function toggleContent(id) {
           <span style="color:#28a745;">✓ Accepted</span> — will be available online in Springer Book Chapter
         {% endif %}
         
-        {% if post.title contains 'Cardiovascular Disease' %}
+        {% if post.title contains 'conceptual IoT' %}
           <button onclick="toggleContent('methodology-{{ pub_counter }}')">🔬 Methodology</button>
           <button onclick="toggleContent('slides-{{ pub_counter }}')">📊 Slides</button>
         {% endif %}
@@ -161,15 +119,15 @@ function toggleContent(id) {
         {% endif %}
       </div>
       
-      {% if post.title contains 'Cardiovascular Disease' %}
+      {% if post.title contains 'conceptual IoT' %}
         <div id="methodology-{{ pub_counter }}" class="collapsible-content">
           <h4>Methodology</h4>
-          <img src="{{ base_path }}/files/Evaluating the Efficacy of Feature Selection Methods in Cardiovascular Disease Prediction with Machine Learning model.jpeg" alt="CVD Prediction Methodology">
+          <img src="{{ base_path }}/files/CKD Method.pdf" alt="CKD Prediction Methodology">
         </div>
         
         <div id="slides-{{ pub_counter }}" class="collapsible-content">
           <h4>Presentation Slides</h4>
-          <a href="{{ base_path }}/files/Presentation Slide Evaluating the Efficacy of Feature Selection Methods in Cardiovascular Disease Prediction with Machine Learning.pdf" target="_blank" style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Slides (PDF)</a>
+          <a href="{{ base_path }}/files/Machine Learning.pdf" target="_blank" style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Paper (PDF)</a>
         </div>
       {% endif %}
     </li>
