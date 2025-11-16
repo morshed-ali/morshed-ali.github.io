@@ -63,6 +63,7 @@ author_profile: true
 }
 </style>
 
+
 <script>
 function toggleContent(id) {
   var content = document.getElementById(id);
@@ -97,7 +98,7 @@ function toggleContent(id) {
         {% assign updated_authors = "" %}
         {% for author in author_parts %}
           {% if author == post.corresponding %}
-            {% assign updated_author = author | append: '*' %}
+            {% assign updated_author = author | append: '★' %}
             {% assign updated_author = updated_author | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' %}
           {% else %}
             {% assign updated_author = author | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' %}
@@ -152,13 +153,13 @@ function toggleContent(id) {
       {% if post.title contains 'conceptual IoT' and post.paperurl and post.status != 'Submitted' and post.status != 'Accepted' %}
         <div id="journal-methodology-{{ pub_counter }}" class="collapsible-content" style="display: none;">
           <h4>Methodology</h4>
-          <img src="{{ '/files/CKD Method.jpg' | relative_url }}" alt="CKD Prediction Methodology" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+          <img src="{{ '{{ base_path }}/files/CKD Method.jpg' | relative_url }}" alt="CKD Prediction Methodology" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
           <p><em>Figure: Proposed methodology for CKD detection using IoT and deep learning</em></p>
         </div>
         
         <div id="journal-slides-{{ pub_counter }}" class="collapsible-content" style="display: none;">
           <h4>Presentation Slides</h4>
-          <a href="{{ '/files/CKD Method.pdf' | relative_url }}" target="_blank" style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Paper (PDF)</a>
+          <a href="{{ '{{ base_path }}/files/CKD Method.pdf' | relative_url }}" target="_blank" style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Paper (PDF)</a>
         </div>
       {% endif %}
     </li>
@@ -232,13 +233,13 @@ function toggleContent(id) {
         
         <div id="conf-methodology-{{ pub_counter }}" class="collapsible-content" style="display: none;">
           <h4>Methodology</h4>
-          <img src="{{ '/files/acb_net_paper_model (1).png' | relative_url }}" alt="ACB-TriNet Methodology" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+          <img src="{{ '{{ base_path }}/files/acb_net_paper_model (1).png' | relative_url }}" alt="ACB-TriNet Methodology" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
           <p><em>Figure: ACB-TriNet architecture with asymmetric convolutions and triplet attention</em></p>
         </div>
         
         <div id="conf-slides-{{ pub_counter }}" class="collapsible-content" style="display: none;">
           <h4>Presentation Slides</h4>
-          <a href="{{ '/files/ICETCS-ID-12_ACBNet Paper Presentation Slides.pptx' | relative_url }}" download style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Slides (PPTX)</a>
+          <a href="{{ '{{ base_path }}/files/ICETCS-ID-12_ACBNet Paper Presentation Slides.pptx' | relative_url }}" download style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Slides (PPTX)</a>
         </div>
       </li>
     {% endif %}
@@ -264,7 +265,7 @@ function toggleContent(id) {
         {% assign updated_authors = "" %}
         {% for author in author_parts %}
           {% if author == post.corresponding %}
-            {% assign updated_author = author | append: '*' %}
+            {% assign updated_author = author | append: '★' %}
             {% assign updated_author = updated_author | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' %}
           {% else %}
             {% assign updated_author = author | replace: 'Md. Morshed Ali', '<strong>Md. Morshed Ali</strong>' %}
@@ -325,13 +326,13 @@ function toggleContent(id) {
       {% if post.title contains 'Cardiovascular Disease' and post.status != 'Submitted' %}
         <div id="conf-methodology-{{ pub_counter }}" class="collapsible-content" style="display: none;">
           <h4>Methodology</h4>
-          <img src="{{ '/files/cvd-methodology.jpeg' | relative_url }}" alt="CVD Prediction Methodology" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
+          <img src="{{ '{{ base_path }}/files/cvd-methodology.jpeg' | relative_url }}" alt="CVD Prediction Methodology" style="max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px;">
           <p><em>Figure: Feature selection and machine learning pipeline for cardiovascular disease prediction</em></p>
         </div>
         
         <div id="conf-slides-{{ pub_counter }}" class="collapsible-content" style="display: none;">
           <h4>Presentation Slides</h4>
-          <a href="{{ '/files/Presentation Slide Evaluating the Efficacy of Feature Selection Methods in Cardiovascular Disease Prediction with Machine Learning.pdf' | relative_url }}" target="_blank" style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Slides (PDF)</a>
+          <a href="{{ '{{ base_path }}/files/Presentation Slide Evaluating the Efficacy of Feature Selection Methods in Cardiovascular Disease Prediction with Machine Learning.pdf' | relative_url }}" target="_blank" style="display:inline-block;padding:0.5rem 1rem;background:#4CAF50;color:white;border-radius:4px;text-decoration:none;">📥 Download Slides (PDF)</a>
         </div>
       {% endif %}
     </li>
