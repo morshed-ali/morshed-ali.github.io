@@ -8,7 +8,7 @@ date: 2025-01-01
 venue: 'International Conference on Emerging Trends in Cybersecurity (ICETCS 2025, UK) — Accepted'
 citation: 'R. Haque, et al. (2025). "ACB-TriNet: Asymmetric Convolutions and Triplet Attention for Effective Malware Classification." In Proceedings of ICETCS 2025.'
 authors: 'Rezwanul Haque, Shakil Mahmud Shuvo, Shadman Ibne Saiful, Imran Miah, Md. Morshed Ali, Dr. S. M. Nazmus Sadat.'
-corresponding: '#'
+
 codeurl: 'https://github.com/morshed-ali/ACB_Trinet'
 
 ---
