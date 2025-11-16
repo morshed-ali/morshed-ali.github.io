@@ -286,7 +286,6 @@ function toggleContent(id) {
       
       <div class="project-status">
         <span class="status-badge active">Active</span>
-        <span class="collaborators">Collaborating with: Medical Research Institute</span>
       </div>
     </div>
   </div>
@@ -309,7 +308,6 @@ function toggleContent(id) {
       
       <div class="project-status">
         <span class="status-badge active">Active</span>
-        <span class="collaborators">In partnership: Cybersecurity Lab</span>
       </div>
     </div>
   </div>
@@ -319,47 +317,69 @@ function toggleContent(id) {
 .research-projects {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 3rem;
   margin: 2rem 0;
 }
 
 .project-item {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   align-items: flex-start;
   background: white;
-  padding: 2rem;
+  padding: 2.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-left: 4px solid #3498db;
+  min-height: 400px;
 }
 
 .project-image {
-  flex: 0 0 250px;
+  flex: 0 0 50%;
   min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.project-image img:hover {
+  transform: scale(1.02);
 }
 
 .project-content {
-  flex: 1;
+  flex: 0 0 50%;
   min-width: 0;
+  padding: 0 1rem;
 }
 
 .project-content h3 {
   color: #2c3e50;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .project-content h4 {
   color: #34495e;
-  margin: 1.5rem 0 0.5rem 0;
-  font-size: 1.1rem;
+  margin: 2rem 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .project-content p {
   line-height: 1.7;
   color: #555;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
 }
 
 .project-content ul {
@@ -368,48 +388,71 @@ function toggleContent(id) {
 }
 
 .project-content li {
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
   color: #444;
+  font-size: 1rem;
 }
 
 .project-status {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid #eee;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #ecf0f1;
 }
 
 .status-badge {
-  padding: 0.3rem 0.8rem;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-block;
 }
 
 .status-badge.active {
   background: #27ae60;
   color: white;
-}
-
-.collaborators {
-  font-size: 0.9rem;
-  color: #666;
-  font-style: italic;
+  box-shadow: 0 2px 4px rgba(39, 174, 96, 0.3);
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .project-item {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: auto;
   }
   
   .project-image {
     flex: none;
     width: 100%;
+  }
+  
+  .project-content {
+    flex: none;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .project-image img {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-item {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .research-projects {
+    gap: 2rem;
+  }
+  
+  .project-content h3 {
+    font-size: 1.4rem;
   }
 }
 </style>
