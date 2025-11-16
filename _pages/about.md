@@ -22,6 +22,6 @@ I am seeking a PhD position to advance trustworthy and privacy‑preserving mach
 If you're a faculty member or researcher working in these areas, I'd be excited to connect and explore potential PhD opportunities.
 
 <!-- Visitor Counter -->
-<div style="text-align: center; margin: 20px 0;">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=morshed-ali.morshed-ali.github.io" alt="Visitors" />
+<div style="text-align: left; margin: 20px 0;">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=morshed-ali.morshed-ali.github.io" alt="Profile Views:" />
 </div>
