@@ -1,13 +1,11 @@
 ---
 permalink: /
-title: "Md Morshed Ali"
+title: "About Me"
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
-
-## About Me
 
 I am Md Morshed Ali, a prospective PhD student in Computer Science and Lecturer in the Department of CSE at Uttara University. I have hands‑on teaching and mentoring experience in core CS courses and actively collaborate on research projects bridging computer security, computer vision, and NLP. My recent work evaluates feature selection strategies for cardiovascular disease prediction and develops efficient deep models for malware image classification.
 
