@@ -7,6 +7,15 @@ redirect_from:
   - /resume
 ---
 
+---
+
+<meta http-equiv="refresh" content="0; url={{ '/files/Md_Morshed_Ali___Resume_Updated.pdf' | relative_url }}" />
+<script>
+  window.location.href = '{{ '/files/Md_Morshed_Ali___Resume_Updated.pdf' | relative_url }}';
+</script>
+<p>If you are not redirected, <a href="{{ '/files/Md_Morshed_Ali___Resume_Updated.pdf' | relative_url }}">click here</a>.</p>
+
+<!--
 {% include base_path %}
 
 Education
@@ -62,3 +71,4 @@ Teaching
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams
+-->
