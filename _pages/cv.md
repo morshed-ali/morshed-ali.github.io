@@ -9,8 +9,8 @@ redirect_from:
 
 ---
 
-<meta http-equiv="refresh" content="0; url={{ '/files/Md_Morshed_Ali___Resume Updated 20.11.25.pdf' | relative_url }}" />
+<meta http-equiv="refresh" content="0; url={{ '/files/Md_Morshed_Ali___Resume_Updated.pdf' | relative_url }}" />
 <script>
-  window.location.href = '{{ '/files/Md_Morshed_Ali___Resume Updated 20.11.25.pdf' | relative_url }}';
+  window.location.href = '{{ '/files/Md_Morshed_Ali___Resume_Updated.pdf' | relative_url }}';
 </script>
-<p>If you are not redirected, <a href="{{ '/files/Md_Morshed_Ali___Resume Updated 20.11.25.pdf' | relative_url }}">click here</a>.</p>
+<p>If you are not redirected, <a href="{{ '/files/Md_Morshed_Ali___Resume_Updated.pdf' | relative_url }}">click here</a>.</p>
